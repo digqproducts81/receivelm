@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — receiveLM</title>
+  <meta name="description" content="Apply for a receiveLM account or sign in. receiveLM is currently available to approved enterprise customers only.">
+  <link rel="canonical" href="https://receivelm.com/register.html">
+
+  <!-- Favicon & touch icons -->
+  <link rel="icon" href="logo.png">
+  <link rel="shortcut icon" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="receiveLM">
+  <meta property="og:title" content="Register — receiveLM">
+  <meta property="og:description" content="Apply for a receiveLM account or sign in. Currently available to approved enterprise customers only.">
+  <meta property="og:image" content="https://receivelm.com/logo.png">
+  <meta property="og:url" content="https://receivelm.com/register.html">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Register — receiveLM">
+  <meta name="twitter:description" content="Apply for a receiveLM account or sign in. Currently available to approved enterprise customers only.">
+  <meta name="twitter:image" content="https://receivelm.com/logo.png">
+
+  <!-- Preconnect for Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --text: #000000;
+      --text-secondary: #333333;
+      --text-muted: #666666;
+      --grid-line: #000000;
+      --grid-line-light: #E5E5E5;
+      --max-w: 1280px;
+      --gutter: 24px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--text); text-decoration: none; }
+    a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    img { max-width: 100%; display: block; }
+
+    :focus-visible {
+      outline: 2px solid var(--text);
+      outline-offset: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+    }
+
+    /* ===== Header ===== */
+    .site-header {
+      border-bottom: 1px solid var(--grid-line);
+      padding: 20px 0;
+    }
+
+    .header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.125rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img { height: 32px; width: auto; }
+
+    .back-link {
+      font-size: 0.875rem;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .back-link::before {
+      content: '←';
+      font-size: 1rem;
+    }
+
+    /* ===== Main ===== */
+    main {
+      flex: 1;
+      padding: 64px 0 96px;
+    }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+    }
+
+    /* ===== Notice Banner ===== */
+    .notice {
+      border: 1px solid var(--grid-line);
+      padding: 28px 32px;
+      margin-bottom: 56px;
+      background: #FAFAFA;
+    }
+
+    .notice-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border: 1px solid var(--grid-line);
+      padding: 4px 10px;
+      margin-bottom: 16px;
+      background: var(--bg);
+    }
+
+    .notice h1 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .notice p {
+      font-size: 0.938rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 70ch;
+    }
+
+    /* ===== Two-column layout ===== */
+    .options-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 0;
+      border: 1px solid var(--grid-line);
+    }
+
+    .option-panel {
+      padding: 48px 40px;
+    }
+
+    .option-panel:first-child {
+      border-right: 1px solid var(--grid-line);
+      background: var(--bg);
+    }
+
+    .option-panel:last-child {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .option-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .option-panel h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .option-panel .lead {
+      font-size: 0.938rem;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .option-panel:first-child .lead {
+      color: var(--text-secondary);
+    }
+
+    .option-panel:last-child .lead {
+      color: #CCCCCC;
+    }
+
+    .option-panel ul {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .option-panel ul li {
+      font-size: 0.875rem;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--grid-line-light);
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .option-panel:last-child ul li {
+      border-color: #333;
+      color: #CCCCCC;
+    }
+
+    .option-panel ul li::before {
+      content: '—';
+      flex-shrink: 0;
+      color: var(--text-muted);
+    }
+
+    .option-panel:last-child ul li::before {
+      color: #888;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 28px;
+      font-size: 0.938rem;
+      font-weight: 600;
+      border: 1px solid var(--text);
+      background: var(--text);
+      color: var(--bg);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .btn:hover {
+      background: var(--bg);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .btn-inverted {
+      background: var(--bg);
+      color: var(--text);
+      border-color: var(--bg);
+    }
+
+    .btn-inverted:hover {
+      background: transparent;
+      color: var(--bg);
+      border-color: var(--bg);
+    }
+
+    /* ===== Form ===== */
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.813rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      color: #CCCCCC;
+    }
+
+    .form-input {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 0.938rem;
+      font-family: inherit;
+      background: transparent;
+      border: 1px solid #555;
+      color: var(--bg);
+      transition: border-color 0.2s;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--bg);
+    }
+
+    .form-input::placeholder {
+      color: #888;
+    }
+
+    /* ===== Checkboxes ===== */
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      cursor: pointer;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: var(--bg);
+      flex-shrink: 0;
+      background: transparent;
+      border: 1px solid #555;
+    }
+
+    .checkbox-group label {
+      font-size: 0.875rem;
+      line-height: 1.5;
+      cursor: pointer;
+      color: #CCCCCC;
+      flex: 1;
+    }
+
+    .checkbox-group label a {
+      color: var(--bg);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .checkbox-group label a:hover {
+      color: #CCCCCC;
+    }
+
+    .form-submit {
+      margin-top: 28px;
+    }
+
+    .form-footer {
+      margin-top: 20px;
+      font-size: 0.813rem;
+      color: #888;
+      text-align: center;
+    }
+
+    .form-footer a {
+      color: #CCCCCC;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* ===== Info strip ===== */
+    .info-strip {
+      margin-top: 56px;
+      padding: 32px;
+      border: 1px solid var(--grid-line);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: flex-start;
+    }
+
+    .info-strip-icon {
+      width: 32px;
+      height: 32px;
+      border: 1px solid var(--grid-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .info-strip h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      letter-spacing: -0.01em;
+    }
+
+    .info-strip p {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 70ch;
+    }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      border-top: 1px solid var(--grid-line);
+      padding: 32px 0;
+      font-size: 0.813rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 var(--gutter);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+    }
+
+    .footer-links a:hover {
+      color: var(--text);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 900px) {
+      .options-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .option-panel:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--grid-line);
+      }
+
+      .option-panel {
+        padding: 36px 28px;
+      }
+
+      .info-strip {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      :root { --gutter: 16px; }
+
+      main {
+        padding: 40px 0 64px;
+      }
+
+      .notice {
+        padding: 24px;
+        margin-bottom: 40px;
+      }
+
+      .option-panel {
+        padding: 28px 20px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="receiveLM logo" width="32" height="32">
+        <span>receiveLM</span>
+      </a>
+      <a href="index.html" class="back-link">Back to home</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+
+      <!-- Notice Banner -->
+      <div class="notice">
+        <span class="notice-label">Enterprise access only</span>
+        <h1>receiveLM is currently invite-only for approved businesses.</h1>
+        <p>
+          To protect our customers and comply with legal obligations, we do not offer open self-service signups. Every account is reviewed and approved by the receiveLM team before activation. This helps us prevent spam, illegal use, and the misuse of our voice models for unsolicited advertising or fraudulent calls. If you are a legitimate business looking to answer missed inbound calls, please apply below or sign in if you already have credentials.
+        </p>
+      </div>
+
+      <!-- Options Grid -->
+      <div class="options-grid">
+
+        <!-- Option 1: Apply -->
+        <div class="option-panel">
+          <span class="option-tag">New applicant</span>
+          <h2>Proceed to apply</h2>
+          <p class="lead">
+            Tell us about your business and how you plan to use receiveLM. Applications are reviewed manually, usually within one business day.
+          </p>
+          <ul>
+            <li>Business name, contact details, and use case</li>
+            <li>Confirmation of lawful, inbound-call use only</li>
+            <li>Agreement to our acceptable-use policy</li>
+            <li>Approval required before any account is created</li>
+          </ul>
+          <a href="apply.html" class="btn">Proceed to apply</a>
+        </div>
+
+        <!-- Option 2: Sign in -->
+        <div class="option-panel">
+          <span class="option-tag">Existing customer</span>
+          <h2>Already have an ID?</h2>
+          <p class="lead">
+            Sign in with the credentials issued to you after your application was approved.
+          </p>
+
+          <form id="loginForm" action="#" method="post" novalidate>
+            <div class="form-group">
+              <label for="loginId" class="form-label">ID</label>
+              <input type="text" id="loginId" name="id" class="form-input" placeholder="your-business-id" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+              <label for="loginPassword" class="form-label">Password</label>
+              <input type="password" id="loginPassword" name="password" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="rememberMe" name="remember">
+              <label for="rememberMe">Tick this option to remember your login info for 30 days on this device.</label>
+            </div>
+
+            <div class="checkbox-group">
+              <input type="checkbox" id="agreeTerms" name="terms" required>
+              <label for="agreeTerms">By ticking this option you agree to our <a href="t&c.html" target="_blank" rel="noopener">Terms and Conditions</a> and confirm you will use receiveLM only for lawful, inbound business purposes.</label>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn btn-inverted">Sign in</button>
+            </div>
+
+            <p class="form-footer">
+              Forgot your credentials? <a href="mailto:support@receivelm.com">Contact support</a>
+            </p>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Info Strip -->
+      <div class="info-strip">
+        <div class="info-strip-icon">!</div>
+        <div>
+          <h3>Why we require approval</h3>
+          <p>
+            receiveLM's voice models are powerful. To keep the telephone network safe and to meet our legal obligations across jurisdictions (including TCPA in the US, GDPR in the EU, and equivalent laws elsewhere), we only onboard verified businesses that will use the service to answer inbound calls they are already authorised to receive. We do not permit outbound spam, unsolicited advertising, robocalls, or any illegal activity. Accounts found in violation are terminated immediately.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>&copy; <span id="year"></span> receiveLM. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="t&c.html">Terms &amp; Conditions</a>
+        <a href="mailto:privacy@receivelm.com">Privacy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Basic form handling (demo only — replace with real backend)
+    const form = document.getElementById('loginForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const id = document.getElementById('loginId').value.trim();
+      const password = document.getElementById('loginPassword').value;
+      const terms = document.getElementById('agreeTerms').checked;
+
+      if (!id || !password) {
+        alert('Please enter both your ID and password.');
+        return;
+      }
+
+      if (!terms) {
+        alert('You must agree to the Terms and Conditions to continue.');
+        return;
+      }
+
+      // In a real implementation, this would POST to your authentication backend.
+      // For now, we simply acknowledge the submission.
+      alert('Sign-in request received. If your credentials are valid, you will be redirected to your dashboard.');
+    });
+  </script>
+
+</body>
+</html>
