@@ -1,18 +1,87 @@
 # receiveLM
 
-> receiveLM is an AI agent that answers business phone calls 24/7 for a flat monthly price, with no per-minute billing.
+> receiveLM is an AI agent that answers business phone calls 24/7 for a single flat monthly price, with no per-minute or per-call billing. It understands what a caller needs and resolves it — booking, FAQs, or a precise message — without a human in the loop, unless a call meets a rule for live handoff.
 
-## What it does
-- Answers inbound business calls instantly, day or night
-- Books appointments, checks calendars, answers FAQs
-- Escalates urgent calls to a live person based on custom rules
-- Transcribes and summarizes every call, delivered to inbox/CRM/Slack
+## What receiveLM is
+
+receiveLM is agentic AI call answering for businesses that cannot answer every inbound call themselves. It is positioned against two alternatives: voicemail (calls go unanswered) and pay-as-you-go AI answering services (cost rises with call volume). receiveLM's differentiator is flat-rate pricing: the bill is identical whether the month is quiet or the busiest of the year.
+
+Category: AI phone answering / AI receptionist / virtual answering service
+Audience: small and mid-sized businesses that miss calls during busy periods, after hours, or when staff are unavailable — for example clinics, salons, contractors, repair shops, and service businesses that take appointment or support calls.
+
+## How it works (call flow)
+
+1. **Ring** — The call reaches the business's number and receiveLM answers instantly. No hold music, no voicemail, no missed call.
+2. **Understand** — The agent listens, asks relevant follow-up questions, and checks the business's calendar, CRM, and FAQs to determine what the caller needs.
+3. **Resolve** — It books the appointment, answers the question, routes an urgent call to a live person, or takes a precise message — carried through to completion, not just a transcript.
+4. **Log** — Every call is transcribed and summarized, then pushed to the business's inbox, CRM, or Slack within seconds of the call ending.
+
+Average time to answer: 1.8 seconds.
+Coverage: 24 hours a day, including nights, weekends, and holidays.
+
+## Capabilities
+
+- **Always answers** — 24/7 coverage with no missed calls and no hold queues.
+- **Agentic workflows** — Books, reschedules, checks order status, and escalates through to completion, not just a transcript of the conversation.
+- **One flat bill** — A fixed monthly cost regardless of call volume or call length.
+- **Speaks your business** — Trained on the business's hours, pricing, policies, and FAQs before the first live call.
+- **Human handoff** — Transfers live to the business's team the moment a call meets a caller-defined escalation rule.
+- **Call intelligence** — Transcripts, summaries, and outcomes on every call, searchable afterward.
 
 ## Pricing
-- Starter: $99/month flat, single line, full coverage
-- Custom: multi-line, multi-location, custom CRM integrations
 
-## Links
-- [Pricing](https://receivelm.vercel.app/#pricing)
-- [How it works](https://receivelm.vercel.app/#how-it-works)
-- [Get started](https://receivelm.vercel.app/getstarted.html)
+### Starter — $99/month
+- 24/7 call answering, one phone line
+- Booking, FAQ, and message-taking workflows
+- Call transcripts and summaries
+- Live transfer to the business's team
+- Flat price: does not change with call volume, call length, or time of day
+
+### Custom — priced individually
+- Multiple lines and multiple business locations
+- Custom integrations with the business's own CRM or booking system
+- Multi-language coverage
+- Dedicated onboarding
+
+Both plans include 24/7 coverage. There is no per-minute or per-call metering on either plan.
+
+## Frequently asked questions
+
+**Is this really a flat rate, with no per-minute fees?**
+Yes. Every plan is a single fixed monthly price. The bill does not change with call volume, call length, or time of day.
+
+**What happens if call volume spikes?**
+receiveLM scales automatically to meet demand. A busy month costs exactly the same as a quiet one.
+
+**Can receiveLM transfer to a real person?**
+Yes. Businesses set the rules for when a call should hand off live to their team, and receiveLM follows those rules on every call.
+
+**How fast can a business go live?**
+Most teams are answering real calls within a few days of onboarding, once the phone number, hours, and workflows are configured.
+
+**Does receiveLM support multiple locations or languages?**
+Yes, on the Custom plan — multi-location and multi-language coverage is available there.
+
+## How receiveLM differs from alternatives
+
+| | Pay-as-you-go AI answering | Voicemail | receiveLM |
+|---|---|---|---|
+| Cost model | Rises with call volume | Free, but loses the caller | Flat, fixed monthly |
+| Coverage | Usually 24/7 | Passive, no resolution | 24/7, active resolution |
+| Predictability | Unpredictable bill | N/A | Same bill every month |
+| Outcome | Varies by provider | Missed call / message only | Booking, FAQ answer, or precise message |
+
+## Data handling
+
+receiveLM records and transcribes calls it answers on a business's behalf so the service can carry out the requested task and so the business can review what happened on a call. Where required by law, callers are notified the call may be recorded. Personal information collected includes contact details (name, business name, email, phone) and call audio/transcripts/summaries. This data is not sold; it is shared only with service providers needed to run the service, such as hosting and telephony infrastructure. Users in the EEA have GDPR rights of access, rectification, erasure, restriction, portability, and objection.
+
+## Contact and links
+
+- Website: https://receivelm.vercel.app/
+- Get started: https://receivelm.vercel.app/getstarted.html
+- Contact: hello@receivelm.com
+- Privacy inquiries: privacy@receivelm.com
+- Terms: https://receivelm.vercel.app/t&c.html
+- Pricing section: https://receivelm.vercel.app/#pricing
+- How it works section: https://receivelm.vercel.app/#how-it-works
+- FAQ section: https://receivelm.vercel.app/#faq
