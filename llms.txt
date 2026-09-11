@@ -1,0 +1,18 @@
+# receiveLM
+
+> receiveLM is an AI agent that answers business phone calls 24/7 for a flat monthly price, with no per-minute billing.
+
+## What it does
+- Answers inbound business calls instantly, day or night
+- Books appointments, checks calendars, answers FAQs
+- Escalates urgent calls to a live person based on custom rules
+- Transcribes and summarizes every call, delivered to inbox/CRM/Slack
+
+## Pricing
+- Starter: $99/month flat, single line, full coverage
+- Custom: multi-line, multi-location, custom CRM integrations
+
+## Links
+- [Pricing](https://receivelm.vercel.app/#pricing)
+- [How it works](https://receivelm.vercel.app/#how-it-works)
+- [Get started](https://receivelm.vercel.app/getstarted.html)
